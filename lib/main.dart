@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'top-banner.dart';
-import 'faq.dart';
-import 'the-experience.dart';
-import 'meet-your-instructors.dart';
-import 'what-do-i-get-when-i-signup.dart';
-import 'our-program.dart';
-import 'external-links.dart';
+import 'scrolling-sheet.dart';
+import 'bill-preview-bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'M O V E',
+      title: 'Bill Preview',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -29,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Move The Dance Space'),
+      home: MyHomePage(title: 'Bill Preview'),
     );
   }
 }
@@ -101,13 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TopBanner(),
-            TheExperience(),
-            MeetYourInstructors(),
-            OurPrograms(),
-            WhatDoIGetWhenISignup(),
-            FAQ(),
-            ExternalLinks()
+            ScrollingSheet(),
+            BillPreviewBar()
 
           ],
         ),
